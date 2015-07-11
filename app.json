@@ -1,0 +1,29 @@
+{
+  "name": "GitHub Autocomment",
+  "description": "Automatically comment on newly opened GitHub issues and pull requests",
+  "repository": "https://github.com/imakewebthings/github-autocomment",
+  "env": {
+    "ADMIN_USERNAME": {
+      "description": "Username for logging into the admin section"
+    },
+    "ADMIN_PASSWORD": {
+      "description": "Password for logging into the admin section"
+    },
+    "GITHUB_USERNAME": {
+      "description": "Your GitHub username"
+    },
+    "GITHUB_REPO": {
+      "description": "The GitHub repository to autocomment"
+    },
+    "GITHUB_AUTH_TOKEN": {
+      "description": "Oauth GitHub token (you need to create this on GitHub)"
+    },
+    "GITHUB_SECRET": {
+      "description": "A random string for verifying GitHub hooks",
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    "heroku-redis"
+  ]
+}

@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    title Autocomment
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='styles.css')
+  body
+    h1.title Autocomment
+    if templateSaved
+      p.flash-message Template saved successfully.
+    .template
+      form.template-form(method='POST', action='/template')
+        textarea(name='template')= template
+        input(type='submit', value='Save')
+      .template-preview
+
+    script(src='marked.min.js')
+    script(src='scripts.js')
